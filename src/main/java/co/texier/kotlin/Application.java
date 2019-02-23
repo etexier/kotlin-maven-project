@@ -6,12 +6,7 @@ public class Application {
     static final String KOTLIN = "kotlin";
 
     public static void main(String[] args) {
-        String language = KOTLIN;
-        if (args.length > 0) {
-            language = args[0];
-
-        }
-
+        String language = args.length > 0 ? args[0] : KOTLIN;
         switch (language) {
             case JAVA:
                 new JavaService().sayHello();
